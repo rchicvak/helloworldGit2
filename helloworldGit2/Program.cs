@@ -47,21 +47,21 @@ namespace helloworldGit2
 
                 // For Loop, continue for number of iterations
                 int iterations = 10;
-                  for (int i = 0;
-                    i < iterations;
-                        i++)  // i++ = i+1
+                for (int i = 0;
+                  i < iterations;
+                      i++)  // i++ = i+1
                 {
                     Debug.WriteLine("this is iterations   " + i);
                 }
 
                 //---------------------------------
                 // Loop and If logic
-                   iterations = 15;
-                    for (int i = 1;
-                         i <= iterations;
-                         i++)
+                iterations = 15;
+                for (int i = 1;
+                     i <= iterations;
+                     i++)
                 {
-                    if (i %2 == 0)
+                    if (i % 2 == 0)
                     {
                         Debug.WriteLine(i / 2);
                     }
@@ -69,12 +69,12 @@ namespace helloworldGit2
                     {
                         Debug.WriteLine(i * 2);
                     }
-                    
+
                 }
-  
+
             }
-            
-            
+
+
             bool stopProgram = false;
             while (stopProgram == false)
             {
@@ -138,5 +138,15 @@ namespace helloworldGit2
 
             return doublingTime1;
         }
+
+        // Arrays
+           /*
+            decimal[] incomes = new decimal[] { 100.0M, 2344523, 2443245.1M, 123443 };
+            for (int i = 0, i < 4, i++)
+            {
+                Debug.WriteLine(incomes[i]);
+            }
+          */
+
     }
 }
