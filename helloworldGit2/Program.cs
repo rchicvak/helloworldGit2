@@ -98,21 +98,45 @@ namespace helloworldGit2
 
             }   // end while loop
 
-            Debug.WriteLine("this is the Second doubling problem");
-            double rate1 = 0.04;
+            //  Needed to create separate block otherwise creating method considers as large as block is, 
+            //  Make only as small as you need.
+            {
+                Debug.WriteLine("this is the Second doubling problem");
+                double rate1 = 0.04;    // note double is a data type  like integer
+                double doublingTime1 = 0;
+                //double doublingTime1;    no longer needed as included in method
+                doublingTime1 = DoubledIn(rate1);   // references the method created below
+
+
+                rate1 = 0.06;
+                DoubledIn(rate1);  //  delete the method lines and add line for NewMethod(rate1)
+                //doublingTime1 = Math.Log(2) / Math.Log(1 + rate1);
+                //Debug.WriteLine("Doubling Time for rate  for " + rate1 + "  is " + doublingTime1 + "  years");
+                doublingTime1 = DoubledIn(rate1);
+
+                rate1 = 0.08;
+                DoubledIn(rate1);
+                //doublingTime1 = Math.Log(2) / Math.Log(1 + rate1);
+                //Debug.WriteLine("Doubling Time for rate for  " + rate1 + "  is " + doublingTime1 + "  years");
+                doublingTime1 = DoubledIn(rate1);
+
+
+                for (double d = 0.02;   // start
+                    d < 0.12;   // end
+                    d = d + 0.01)  // increment
+                {
+                    doublingTime1 = DoubledIn(d);
+                    Debug.WriteLine(doublingTime1);
+                }
+            }
+        }
+
+        private static double DoubledIn(double rate1)    // method signature  change from static to double
+        {
             double doublingTime1 = Math.Log(2) / Math.Log(1 + rate1);
-            Debug.WriteLine("Doubling Time for rate  " + rate1 +"  is " + doublingTime1 + "  years");
+            Debug.WriteLine("Doubling Time for rate for " + rate1 + "  is " + doublingTime1 + "  years");
 
-            Debug.WriteLine("this is the Second doubling problem");
-            rate1 = 0.06;
-            doublingTime1 = Math.Log(2) / Math.Log(1 + rate1);
-            Debug.WriteLine("Doubling Time for rate  " + rate1 + "  is " + doublingTime1 + "  years");
-
-            Debug.WriteLine("this is the Second doubling problem");
-            rate1 = 0.08;
-            doublingTime1 = Math.Log(2) / Math.Log(1 + rate1);
-            Debug.WriteLine("Doubling Time for rate  " + rate1 + "  is " + doublingTime1 + "  years");
-
+            return doublingTime1;
         }
     }
 }
