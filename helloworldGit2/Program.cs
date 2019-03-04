@@ -32,7 +32,22 @@ namespace helloworldGit2
             decimal decNum = Convert.ToDecimal(userNum);
             Debug.WriteLine("The decimal you entered is  .....  " + decNum);
 
+            //static double DoubledIn(double r)
+            {
+                double rate = 0.08;
+                //double rate = decNum;   //issue with variable
+                double doublingTime = Math.Log(2) / Math.Log(1 + rate);
+                Debug.WriteLine("Doubling Time is " + doublingTime + "  years");
 
+                int iterations = 10;
+                for (int i = 0; i < iterations; i++)  // i++ = i+1
+                {
+                    Debug.WriteLine("this is iterations   " + i);
+                }
+
+               // return doublingTime;
+
+            }
 
 
 
