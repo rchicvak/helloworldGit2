@@ -43,19 +43,38 @@ namespace helloworldGit2
                 double doublingTime = Math.Log(2) / Math.Log(1 + rate);
                 Debug.WriteLine("Doubling Time is " + doublingTime + "  years");
 
+                //--------------------
+
                 // For Loop, continue for number of iterations
                 int iterations = 10;
-                for (int i = 0; i < iterations; i++)  // i++ = i+1
+                  for (int i = 0;
+                    i < iterations;
+                        i++)  // i++ = i+1
                 {
                     Debug.WriteLine("this is iterations   " + i);
                 }
 
-               // return doublingTime;
-
-
-                // Conditional loop
+                //---------------------------------
+                // Loop and If logic
+                   iterations = 15;
+                    for (int i = 1;
+                         i <= iterations;
+                         i++)
+                {
+                    if (i %2 == 0)
+                    {
+                        Debug.WriteLine(i / 2);
+                    }
+                    else
+                    {
+                        Debug.WriteLine(i * 2);
+                    }
+                    
+                }
+  
             }
-
+            
+            
             bool stopProgram = false;
             while (stopProgram == false)
             {
@@ -79,6 +98,20 @@ namespace helloworldGit2
 
             }   // end while loop
 
+            Debug.WriteLine("this is the Second doubling problem");
+            double rate1 = 0.04;
+            double doublingTime1 = Math.Log(2) / Math.Log(1 + rate1);
+            Debug.WriteLine("Doubling Time for rate  " + rate1 +"  is " + doublingTime1 + "  years");
+
+            Debug.WriteLine("this is the Second doubling problem");
+            rate1 = 0.06;
+            doublingTime1 = Math.Log(2) / Math.Log(1 + rate1);
+            Debug.WriteLine("Doubling Time for rate  " + rate1 + "  is " + doublingTime1 + "  years");
+
+            Debug.WriteLine("this is the Second doubling problem");
+            rate1 = 0.08;
+            doublingTime1 = Math.Log(2) / Math.Log(1 + rate1);
+            Debug.WriteLine("Doubling Time for rate  " + rate1 + "  is " + doublingTime1 + "  years");
 
         }
     }
