@@ -26,7 +26,13 @@ namespace helloworldGit2
             Debug.WriteLine(age);
             // add comment 2
 
-           
+            Console.WriteLine("Please enter the interest rate as 0.0X.....   ");
+            string userNum = Console.ReadLine();
+            Debug.WriteLine("The number you entered is ...." + userNum);
+            decimal decNum = Convert.ToDecimal(userNum);
+            Debug.WriteLine("The decimal you entered is  .....  " + decNum);
+
+
 
 
 
