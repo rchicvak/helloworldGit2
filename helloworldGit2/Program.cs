@@ -5,6 +5,10 @@ namespace helloworldGit2
 {
     class Program
     {
+        private static decimal income;
+        private static decimal taxRate;
+        private static decimal taxLiability;
+
         static void Main(string[] args)
         {
             Debug.WriteLine("Hello World!");
@@ -39,6 +43,7 @@ namespace helloworldGit2
                 double doublingTime = Math.Log(2) / Math.Log(1 + rate);
                 Debug.WriteLine("Doubling Time is " + doublingTime + "  years");
 
+                // For Loop, continue for number of iterations
                 int iterations = 10;
                 for (int i = 0; i < iterations; i++)  // i++ = i+1
                 {
@@ -47,9 +52,32 @@ namespace helloworldGit2
 
                // return doublingTime;
 
+
+                // Conditional loop
             }
 
+            bool stopProgram = false;
+            while (stopProgram == false)
+            {
+                Console.Write("Please enter your income in $, or -1 to stop, no decimals or commas....  ");
+                income = Convert.ToDecimal(Console.ReadLine());
+                if (income > 400000)
+                {
+                    taxRate = 0.5M;
+                    taxLiability = taxRate * income;
+                }
+                else if (income >= 0)
+                {
+                    taxLiability = 0;
+                }
+                else
+                {
+                    stopProgram = true;
+                }
 
+                Console.WriteLine("Tax Liability is ... " + taxLiability);
+
+            }   // end while loop
 
 
         }
